@@ -32,7 +32,7 @@
  	<!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
         <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:400,700'>
-        <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/bootstrap/3-0-2/css/bootstrap.min.css">
         <link rel="stylesheet" href="./assets/styleComingSoon.css">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->

@@ -25,7 +25,7 @@
 	?>
 
     <!-- Bootstrap core CSS -->
-    <link href="./assets/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/bootstrap/3-0-2/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
