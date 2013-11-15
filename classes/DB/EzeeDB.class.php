@@ -4,17 +4,36 @@
 // 7-May-2012
 class EzeeDB {
 
-	protected $db_host = 'EzeeTest.db.11533594.hostedresource.com';
+	//protected $db_host = 'EzeeTest.db.11533594.hostedresource.com';
+	//	protected $db_host = '182.50.133.49';
+
+	private $db_host;
 	protected $db_user = 'EzeeTest';
 	protected $db_pass = 'Vinuta@138';
     protected $db_name = "EzeeTest";
 	
-	
+
+    /* Temporary Get and Set functions */
+    public function setDbHost($dbhostname)
+    {
+    	$this->db_host = $dbhostname;	
+    } 
+    
+
+    public function getDbHost()
+    {
+    	return $this->db_host ;	
+    } 
+    
 	//open a connection to the database. Make sure this is called
 	//on every page that needs to use the database.
 	public function connect() {
     	
-		$connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+		//$connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+		
+		echo 'Before calling userTools->login function' .$this->getDbHost(). '';
+		
+		$connection = mysqli_connect($this->getDbHost(), $this->db_user, $this->db_pass, $this->db_name);
 		
 		if (!$connection) {
 		    die('Connect Error (' . mysqli_connect_errno() . ') '
@@ -51,7 +70,6 @@ class EzeeDB {
 				
 		$sql = "SELECT * FROM $table WHERE $where ";
 
-		//$result = mysqli_query($connection, $sql);
 		$result = mysqli_query($this->connect(), $sql);
 				
 		if (!$result) {
@@ -74,14 +92,6 @@ class EzeeDB {
 	//returns a full row or rows from $table using $where as the where clause.
 	//return value is an associative array with column names as keys.
 	public function selectAll($table) {
-		/*
-		$connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
-		
-		if (!$connection) {
-		    die('Connect Error (' . mysqli_connect_errno() . ') '
-            . mysqli_connect_error());
-		}
-		*/
 		
 		$sql = "SELECT * FROM $table";
 		//$result = mysqli_query($connection, $sql);
@@ -100,14 +110,6 @@ class EzeeDB {
 	//and the values are the data that will be inserted into those columns.
 	//$table is the name of the table and $where is the sql where clause.
 	public function update($data, $table, $where) {
-		/*
-		$connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
-		
-		if (!$connection) {
-		    die('Connect Error (' . mysqli_connect_errno() . ') '
-            . mysqli_connect_error());
-		}
-		*/
 		
 		foreach ($data as $column => $value) {
 			$sql = "UPDATE $table SET $column = $value WHERE $where";
@@ -124,14 +126,7 @@ class EzeeDB {
 	//and the values are the data that will be inserted into those columns.
 	//$table is the name of the table.
 	public function insert($data, $table) {
-/*
-		$connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
-		
-		if (!$connection) {
-		    die('Connect Error (' . mysqli_connect_errno() . ') '
-            . mysqli_connect_error());
-		}
-	*/	
+
 		$columns = "";
 		$values = "";
 

@@ -10,11 +10,13 @@ class UserTools {
 	//username and password match a row in the database.
 	//If it is successful, set the session variables
 	//and store the user object within.
-	public function login($email, $password)
+	public function login($email, $password, $dbhostname)
 	{
 		// When we store the pwd from UI, we need to uncomment this
 		//$hashedPassword = md5($password);
 		$db = new EzeeDB();
+		
+		$db->setDbHost($dbhostname);
 		
 		$result = mysqli_query($db->connect(), "SELECT * FROM Users WHERE Email = '$email' AND Password = '$password'");
 		
