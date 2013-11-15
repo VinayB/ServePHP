@@ -5,7 +5,6 @@
 // http://buildinternet.com/2009/12/creating-your-first-php-application-part-2/
 
 require_once 'EzeeDB.class.php';
-require_once 'dbfns.class.php';
 
 class User {
 

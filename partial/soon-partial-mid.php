@@ -39,7 +39,7 @@
                 <div class="span12 subscribe">
                     <h3>Subscribe to our newsletter</h3>
                     <p>Sign up now to our newsletter and you'll be one of the first to know when the site is ready:</p>
-                    <form class="form-inline" action="assets/sendmail.php" method="post">
+                    <form class="form-inline" action="./assets/sendmail.php" method="post">
                         <input type="text" name="email" placeholder="Enter your email...">
                         <button type="submit" class="btn">Subscribe</button>
                     </form>

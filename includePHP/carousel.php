@@ -9,7 +9,7 @@
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <img src="static/images/Pittsburgh_dawn_city_pano.jpg" alt="Pittsuburgh">
+          <img src="./static/images/Pittsburgh_dawn_city_pano.jpg" alt="Pittsuburgh">
           <div class="container">
             <div class="carousel-caption">
               <h1>Your Balance Sheet in Real Time !</h1>
@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="static/images/Chicago_Grant_Park_night_pano.jpg" alt="Chicago">
+          <img src="./static/images/Chicago_Grant_Park_night_pano.jpg" alt="Chicago">
           <div class="container">
             <div class="carousel-caption">
               <h1>Get the Best Service from competing Providers</h1>
@@ -29,7 +29,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="static/images/Bangalore_Panorama_edit1.jpg" alt="Bangalore OR Bengaluru">
+          <img src="./static/images/Bangalore_Panorama_edit1.jpg" alt="Bangalore OR Bengaluru">
           <div class="container">
             <div class="carousel-caption">
               <h1>One more Reason to Sign up!</h1>

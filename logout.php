@@ -1,6 +1,6 @@
 //logout.php
 <?php
-	require_once 'classes/DB/UserTools.class.php';
+	require_once './classes/DB/UserTools.class.php';
 		
 	$userTools = new UserTools();
 	$userTools->logout();

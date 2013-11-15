@@ -7,7 +7,7 @@
 
 	 <div class="row">
         <div class="col-md-6">
-          <img class="img-responsive" src="static/images/service3.png">
+          <img class="img-responsive" src="./static/images/service3.png">
         </div>
         <div class="col-md-6">
           <h2>About us</h2>

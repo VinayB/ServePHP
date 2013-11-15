@@ -1,8 +1,4 @@
 <?php
-
-// Get DB connection 
-//require_once 'classes/DB/dbfns.class.php';
-
 // Code inherited from 
 // http://buildinternet.com/2009/12/creating-your-first-php-application-part-1/
 // 7-May-2012

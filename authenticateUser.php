@@ -1,7 +1,7 @@
 <?php
 //authenticateUser.php
 
-require_once 'classes/includes/global.inc.php';
+require_once './classes/includes/global.inc.php';
 //require_once 'classes/DB/UserTools.class.php';
 
 $email = "";

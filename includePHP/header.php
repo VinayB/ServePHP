@@ -30,7 +30,7 @@
 		      	echo '</div>';
 		      	
         		
-        		include('includePHP/signup.php');
-        		include('includePHP/login.php'); 
+        		include('./includePHP/signup.php');
+        		include('./includePHP/login.php'); 
         	}
 ?>

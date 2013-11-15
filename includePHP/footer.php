@@ -79,7 +79,7 @@
                             <div class="col-md-4">
                                 <p class="muted pull-left">
                                 <a class="navbar-brand" href="#">
-                                	<img alt="" src="static/images/EzeeServeLogoSmall.png" >
+                                	<img alt="" src="./static/images/EzeeServeLogoSmall.png" >
                                 </a>
                                 </p>
 							</div> 

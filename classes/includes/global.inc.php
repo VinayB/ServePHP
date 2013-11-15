@@ -1,7 +1,7 @@
 <?php
 
 //require_once 'classes/DB/User.class.php';
-require_once 'classes/DB/UserTools.class.php';
+require_once './classes/DB/UserTools.class.php';
 //require_once 'classes/DB/EzeeDB.class.php';
 	
 
