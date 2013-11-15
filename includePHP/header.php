@@ -23,13 +23,14 @@
         	}
         	else
         	{
+        		
           		echo '<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">';
 	        	echo '<p class="navbar-text navbar-right"><a data-toggle="modal" href="#Signup" class="navbar-link">Sign up</a></p>'; 
 	        	echo ' <p class="navbar-text navbar-right"><a data-toggle="modal" href="#Login" class="navbar-link">Login</a></p>';
 		      	echo '</div>';
 		      	
-        		include('includePHP/signup.php'); 
+        		
+        		include('includePHP/signup.php');
         		include('includePHP/login.php'); 
-		      	
         	}
 ?>
