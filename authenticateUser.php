@@ -16,9 +16,12 @@ if(isset($_POST['btn_Login'])) {
 	$password = $_POST['Password'];
 	
 	$userTools = new UserTools();
-	
+	echo 'Before calling userTools->login function';
 	// Check if login is successful
 	if ($userTools->login($email, $password)) {
+		
+		echo 'After calling userTools->login function';
+		
 		//redirect them to a welcome page
 	    header("Location: welcome.php");
 	    

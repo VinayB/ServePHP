@@ -15,10 +15,10 @@
 				<form method="post" action="authenticateUser.php" accept-charset="UTF-8" role="form">
 					<fieldset>
 						<div class="form-group">
-							<input type="text" name="Email" class="form-control" placeholder="Email id" value="vinuta@hotmail.com" required>
+							<label>E-mail: </label><input type="text" name="Email" class="form-control" placeholder="" value="" required>
 						</div>
 						<div class="form-group">
-							<input type="password" name="Password" class="form-control" placeholder="Password" value="test" required >
+							<label>Password: </label> <input type="password" name="Password" class="form-control" placeholder="" value="" required >
 						</div>
 						<div class="checkbox">
 							<label class="checkbox pull-left">
