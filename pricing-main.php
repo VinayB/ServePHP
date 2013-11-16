@@ -12,6 +12,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="./assets/bootstrap/3-0-2/css/bootstrap.css" rel="stylesheet">
+    
+	<!-- http://fontawesome.io/get-started/ -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->

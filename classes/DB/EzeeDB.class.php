@@ -48,7 +48,7 @@ class EzeeDB {
 	public function processRowSet($rowSet, $singleRow=false)
 	{
 		$resultArray = array();
-		while($row = mysqli_fetch_assoc($rowSet))
+		while($row = mysql_fetch_assoc($rowSet))
 		{
 			array_push($resultArray, $row);
 		}

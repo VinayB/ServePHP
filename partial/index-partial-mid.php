@@ -3,7 +3,7 @@
       <!--  First Row  -->
       <div class="row">
         <div class="col-md-3">
-         <h4><i class="glyphicon glyphicon-list-alt"></i> <a href="comingSoon.php"> Financial Management</a></h4>
+         <h5><i class="glyphicon glyphicon-list-alt"></i> <a href="comingSoon.php"> Financial Management</a></h5>
           <ul>
 	          <li>Income/Expense Tracking</li>
 			  <li>Maintenance Fees</li>

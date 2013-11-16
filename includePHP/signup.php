@@ -11,7 +11,7 @@
 								<form accept-charset="UTF-8" role="form">
 									<fieldset>
 										<div class="form-group">
-											<input type="text" name="F_Name" class="form-control" placeholder="First Name" value="First Name" required autofocus>
+											<input class="input-sm" type="text" width ="10px" name="F_Name" class="form-control" placeholder="First Name" value="First Name" required autofocus>
 										</div>
 										
 										<div class="form-group">
