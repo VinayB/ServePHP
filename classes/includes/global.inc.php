@@ -1,9 +1,15 @@
 <?php
 
-//require_once 'classes/DB/User.class.php';
+require_once './classes/DB/User.class.php';
 require_once './classes/DB/UserTools.class.php';
-//require_once 'classes/DB/EzeeDB.class.php';
+require_once './classes/DB/EzeeDB.class.php';
 	
+
+// Below lines for testing on Heroku
+$db = new EzeeDB();
+$db->deprec_connect();
+
+//End of testing lines
 
 //initialize UserTools object
 $userTools = new UserTools();

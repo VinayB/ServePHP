@@ -4,16 +4,16 @@
 // 7-May-2012
 class EzeeDB {
 
-	//protected $db_host = 'EzeeTest.db.11533594.hostedresource.com';
+	protected $db_host = 'EzeeTest.db.11533594.hostedresource.com';
 	//	protected $db_host = '182.50.133.49';
 
-	private $db_host;
+	//private $db_host;
 	protected $db_user = 'EzeeTest';
 	protected $db_pass = 'Vinuta@138';
     protected $db_name = "EzeeTest";
 	
 
-    /* Temporary Get and Set functions */
+    /* Temporary Get and Set functions 
     public function setDbHost($dbhostname)
     {
     	$this->db_host = $dbhostname;	
@@ -24,6 +24,7 @@ class EzeeDB {
     {
     	return $this->db_host ;	
     } 
+    */
     
 	//open a connection to the database. Make sure this is called
 	//on every page that needs to use the database.
@@ -31,10 +32,10 @@ class EzeeDB {
     	
 		//$connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
 		
-		echo 'Before calling userTools->login function' .$this->getDbHost(). '';
+		echo 'Before calling userTools->login function' ;
 		
-		$connection = mysqli_connect($this->getDbHost(), $this->db_user, $this->db_pass, $this->db_name);
-		
+		$connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass,$this->db_name);
+
 		if (!$connection) {
 		    die('Connect Error (' . mysqli_connect_errno() . ') '
             . mysqli_connect_error());
@@ -44,6 +45,25 @@ class EzeeDB {
 		return $connection;
 	}
 	
+//Deprecated function. Using for testing with Heroku, which seems to be not supporting
+// mysqli_ calls.
+	public function deprec_connect() {
+    	
+		echo 'Before calling userTools->deprec_login function' .$this->db_host. '';
+		
+		
+			$connection = mysql_connect($this->db_host, $this->db_user, $this->db_pass);
+			
+			mysql_select_db($this->db_name);
+			
+			if (!$connection) {
+			    die('Connect Error (' . mysql_connect_errno() . ') '
+	            . mysql_connect_error());
+	            exit;
+			}
+			
+			return true;
+	}
 	
 	
 	//takes a mysql row set and returns an associative array, where the keys

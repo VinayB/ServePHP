@@ -10,13 +10,11 @@ class UserTools {
 	//username and password match a row in the database.
 	//If it is successful, set the session variables
 	//and store the user object within.
-	public function login($email, $password, $dbhostname)
+	public function login($email, $password)
 	{
 		// When we store the pwd from UI, we need to uncomment this
 		//$hashedPassword = md5($password);
 		$db = new EzeeDB();
-		
-		$db->setDbHost($dbhostname);
 		
 		$result = mysqli_query($db->connect(), "SELECT * FROM Users WHERE Email = '$email' AND Password = '$password'");
 		
@@ -40,6 +38,33 @@ class UserTools {
 		
 	}
 
+	// Deperecated function. Using it to test on Heroku. 
+	public function deprec_login($email, $password)
+	{
+		// When we store the pwd from UI, we need to uncomment this
+		//$hashedPassword = md5($password);
+		$result = mysql_query("SELECT * FROM Users WHERE Email = '$email' AND Password = '$password'");
+		
+		if (!$result) {
+			die('Invalid query: <<D-LOGIN>> - ' .$sql . mysql_error($this->connect()));
+		}
+		
+		if(mysql_num_rows($result) == 1)
+		{
+			$userData = mysql_fetch_assoc($result);
+			
+			$_SESSION["user_name"] = $userData["User_Name"]; 
+			$_SESSION["login_time"] = time();
+			$_SESSION["logged_in"] = 1;
+			return true;
+		}
+		
+		mysql_free_result($result);
+
+		mysql_close($db->connect());
+		
+	}
+	
 	//Log the user out. Destroy the session variables.
 	public function logout() {
 

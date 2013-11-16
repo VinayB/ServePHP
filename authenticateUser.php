@@ -14,17 +14,12 @@ if(isset($_POST['btn_Login'])) {
 	//retrieve the $_POST variables
 	$email = $_POST['Email'];
 	$password = $_POST['Password'];
-	
-	// This is temporary. Need to remove it in production ready code
-	$dbhost = $_POST['DbHost'];
-	
+
 	$userTools = new UserTools();
 	
 	// Check if login is successful
-	if ($userTools->login($email, $password, $dbhost)) {
-		
-		echo 'After calling userTools->login function';
-		
+	if ($userTools->deprec_login($email, $password)) {
+	
 		//redirect them to a welcome page
 	    header("Location: welcome.php");
 	    
