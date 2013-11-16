@@ -5,35 +5,14 @@
 class EzeeDB {
 
 	protected $db_host = 'EzeeTest.db.11533594.hostedresource.com';
-	//	protected $db_host = '182.50.133.49';
-
-	//private $db_host;
 	protected $db_user = 'EzeeTest';
 	protected $db_pass = 'Vinuta@138';
     protected $db_name = "EzeeTest";
-	
 
-    /* Temporary Get and Set functions 
-    public function setDbHost($dbhostname)
-    {
-    	$this->db_host = $dbhostname;	
-    } 
-    
-
-    public function getDbHost()
-    {
-    	return $this->db_host ;	
-    } 
-    */
-    
-	//open a connection to the database. Make sure this is called
+    //open a connection to the database. Make sure this is called
 	//on every page that needs to use the database.
 	public function connect() {
-    	
-		//$connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
-		
-		echo 'Before calling userTools->login function' ;
-		
+
 		$connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass,$this->db_name);
 
 		if (!$connection) {
@@ -48,9 +27,6 @@ class EzeeDB {
 //Deprecated function. Using for testing with Heroku, which seems to be not supporting
 // mysqli_ calls.
 	public function deprec_connect() {
-    	
-		echo 'Before calling userTools->deprec_login function' .$this->db_host. '';
-		
 		
 			$connection = mysql_connect($this->db_host, $this->db_user, $this->db_pass);
 			
@@ -90,7 +66,7 @@ class EzeeDB {
 				
 		$sql = "SELECT * FROM $table WHERE $where ";
 
-		$result = mysqli_query($this->connect(), $sql);
+		$result = mysql_query($this->deprec_connect(), $sql);
 				
 		if (!$result) {
 				unset($_SESSION["user"]);
@@ -98,10 +74,10 @@ class EzeeDB {
 				unset($_SESSION["logged_in"]);
 				session_destroy();
 
-				die('Invalid query: from select - ' .$sql . mysqli_error($this->connect()));
+				die('Invalid query: from select - ' .$sql . mysql_error($this->connect()));
 		}
 		
-		if(mysqli_num_rows($result) == 1)
+		if(mysql_num_rows($result) == 1)
 			return $this->processRowSet($result, true);
 
 		return $this->processRowSet($result);
@@ -115,9 +91,9 @@ class EzeeDB {
 		
 		$sql = "SELECT * FROM $table";
 		//$result = mysqli_query($connection, $sql);
-		$result = mysqli_query($this->connect(), $sql);
+		$result = mysql_query($this->deprec_connect(), $sql);
 				
-		if(mysqli_num_rows($result) == 1)
+		if(mysql_num_rows($result) == 1)
 			return $this->processRowSet($result, true);
 
 		return $this->processRowSet($result);
@@ -135,7 +111,7 @@ class EzeeDB {
 			$sql = "UPDATE $table SET $column = $value WHERE $where";
 			
 			//mysqli_query($connection, $sql) or die(mysqli_error());
-			mysqli_query($this->connect(), $sql) or die(mysqli_error());
+			mysql_query($this->deprec_connect(), $sql) or die(mysql_error());
 			
 		}
 		return true;
@@ -160,10 +136,10 @@ class EzeeDB {
 		$sql = "INSERT INTO $table ($columns) VALUES ($values)";
 		
 		//mysqli_query($connection, $sql) or die(mysqli_error());
-		mysqli_query($this->connect(), $sql) or die(mysqli_error());
+		mysql_query($this->deprec_connect(), $sql) or die(mysql_error());
 
 		//return the ID of the user in the database.
-		return mysqli_insert_id();
+		return mysql_insert_id();
 
 	}
 	

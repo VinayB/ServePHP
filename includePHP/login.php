@@ -20,9 +20,6 @@
 						<div class="form-group">
 							<label>Password: </label> <input type="password" name="Password" class="form-control" placeholder="" value="" required >
 						</div>
-						<div class="form-group">
-							<label>DB Server IP(Only for test): </label> <input type="text" name="DbHost" class="form-control" value="" required >
-						</div>
 						<div class="checkbox">
 							<label class="checkbox pull-left">
 								<input name="RememberMe" type="checkbox" value="RememberMe">

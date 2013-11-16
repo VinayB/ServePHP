@@ -78,8 +78,8 @@ class UserTools {
 	//This is called during registration to make sure all user names are unique.
 	public function checkUsernameExists($email) {
 		$db = new EzeeDB();
-		$result = mysqli_query($db->connect(), "SELECT User_id FROM Users WHERE Email =$email");
-    	if(mysqli_num_rows($result) == 0)
+		$result = mysql_query($db->deprec_connect(), "SELECT User_id FROM Users WHERE Email =$email");
+    	if(mysql_num_rows($result) == 0)
     	{
 			return false;
 	   	}else{
