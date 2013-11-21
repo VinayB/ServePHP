@@ -135,8 +135,9 @@ class EzeeDB {
 
 		$sql = "INSERT INTO $table ($columns) VALUES ($values)";
 		
+		echo 'SQL is ' .$sql;
 		//mysqli_query($connection, $sql) or die(mysqli_error());
-		mysql_query($this->deprec_connect(), $sql) or die(mysql_error());
+		mysql_query($sql) or die(mysql_error());
 
 		//return the ID of the user in the database.
 		return mysql_insert_id();

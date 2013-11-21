@@ -46,7 +46,10 @@
       		?>
  		
         </div>
-		<?php include('partial/pricing-mid.php'); ?>
+		<?php 
+			//include('partial/pricing-mid.php'); 
+			include('partial/welcome-partial.php'); 
+		?>
 	</div> <!-- Container -->
 	
 	<?php include('includePHP/footer.php'); ?>

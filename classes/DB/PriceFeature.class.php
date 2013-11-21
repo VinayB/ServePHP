@@ -20,12 +20,6 @@ class PriceFeature{
 		if (!$result) {
 			die('Invalid query: <<getProductFeaturesByPay>> - ' .$sql . mysql_error($this->connect()));
 		}
-		else
-		{
-			return $result;
-		}
-
-		/*
 		
 		if(mysql_num_rows($result) == 1)
 			return $db->processRowSet($result, true);
@@ -33,7 +27,7 @@ class PriceFeature{
 		return $db->processRowSet($result);
 		
 		mysql_free_result($result);
-*/
+		
 		mysql_close($db->connect());
 		
 		

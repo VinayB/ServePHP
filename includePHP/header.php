@@ -7,6 +7,7 @@
 	          </button>
       			<a class="navbar-brand" href="index.php">EzeeServe</a>  
         	</div>
+
         	<?php 
         	
         	/* If user is logged in show user details and Logout in NavBar */
