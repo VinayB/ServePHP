@@ -121,7 +121,6 @@
 						
 						echo '<div class="span5">';	
 						echo '	<div class="card">';
-						/*echo '		<h5 class="card-heading simple">' .$row['CardHeader']. '</h5>';*/
 						echo '		<div class="card-body">';
 						echo '			<p><strong>' .$row['PostedBy']. '</strong> shared</p>';
 						echo '			<p>' .$row['CardBody']. '</p>';
@@ -131,7 +130,6 @@
 						echo ' 			<button class="btn"><i class="glyphicon glyphicon-thumbs-up"></i></button> ';
 						echo ' 			<button class="btn"><i class="glyphicon glyphicon-comment"></i></button> ';
 						echo '		</div>';
-						 
 						echo '<div class="card-comments">';
 	         			echo '<div class="comments-collapse-toggle"><a data-toggle="collapse" data-target="#c1-comments" href="#c1-comments">34 comments <i class="icon-angle-down"></i></a>     </div>';
 	         			echo '</div>';
