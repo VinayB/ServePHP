@@ -86,11 +86,7 @@
 			<!--  Use the remaining 9 columns of the bootstrap column layout for the content -->
 			<div class="span9">
 	
-				<!-- 
-				*	Within this span10, we will divide the available space into 12 column
-				*	laout. i.e. We will have 2 columns of content, with each of span5 size 
-				-->
-				<?php 
+			<?php 
 				/*	We get the card details from the DB
 				 * 	The Card Header - The subject or the Topic of the discussion, 
 				 * 	Card details (or the body) - The message body
