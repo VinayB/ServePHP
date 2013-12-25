@@ -21,7 +21,9 @@ if(isset($_POST['btn_Login'])) {
 	if ($userTools->deprec_login($email, $password)) {
 	
 		//redirect them to a welcome page
-	    header("Location: welcome.php");
+	    //header("Location: welcome.php");
+	    
+	    header("Location: TestCards.php");
 	    
 	    exit;
 	    

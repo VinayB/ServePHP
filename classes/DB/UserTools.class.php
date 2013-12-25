@@ -16,7 +16,7 @@ class UserTools {
 		//$hashedPassword = md5($password);
 		$db = new EzeeDB();
 		
-		$result = mysqli_query($db->connect(), "SELECT * FROM Users WHERE Email = '$email' AND Password = '$password'");
+		$result = mysqli_query($db->connect(), "SELECT * FROM Users WHERE Email = '$email' AND Password = sha1('$password')");
 		
 		if (!$result) {
 			die('Invalid query: <<LOGIN>> - ' .$sql . mysqli_error($this->connect()));
@@ -43,7 +43,7 @@ class UserTools {
 	{
 		// When we store the pwd from UI, we need to uncomment this
 		//$hashedPassword = md5($password);
-		$result = mysql_query("SELECT * FROM Users WHERE Email = '$email' AND Password = '$password'");
+		$result = mysql_query("SELECT * FROM Users WHERE Email = '$email' AND Password = sha1('$password')");
 		
 		if (!$result) {
 			die('Invalid query: <<D-LOGIN>> - ' .$sql . mysql_error($this->connect()));

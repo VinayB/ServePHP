@@ -1,3 +1,6 @@
+    
+       		
+       		
        		<div class="navbar-header">
 	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 	            <span class="sr-only">Toggle navigation</span>
@@ -11,18 +14,37 @@
         	<?php 
         	
         	/* If user is logged in show user details and Logout in NavBar */
+        	/** Also add the appropriate icons in the NavBar */
         	if (isset($_SESSION["logged_in"]))
         	{
-        		echo '<div class="pull-right">';
-        		echo '<ul class="nav pull-right">';
-        		echo '<li class="dropdown"><a href="#" data-toggle="dropdown"> Welcome, ' .$_SESSION['user_name']. '<b class="caret"></b></a>';
-        		echo '<ul class="dropdown-menu">';
-        		echo '<li><a href="#"><i class="glyphicon glyphicon-cog"></i> Preferences </a></li>';
-        		echo '<li class="divider"></li>';
-        		echo '<li><a href="logout.php"><i class="glyphicon glyphicon-off"></i> Logout</a></li>';
-        		echo '</div>';
+        		/* adding to show icons */
+        		
+        		
+        		echo '<form class="navbar-form navbar-left" role="search">';
+  					echo '<div class="form-group">';
+    					echo '<input type="text" class="form-control" placeholder="Search">';
+  					echo '</div>';
+  					echo '<button type="submit" class="btn btn-default">Submit</button>';
+  					echo '<span> <a href="#"><i class="glyphicon glyphicon-cog"></i> </a> </span>';
+  					
+				echo '</form>';
+        		
+        		/* End adding to show icons */
+				
+				echo '<ul class="nav navbar-nav navbar-right">';
+      				
+      				echo '<li class="dropdown">';
+        				echo '<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> ' .$_SESSION['user_name']. ' <b class="caret"></b></a>';
+	        			echo '<ul class="dropdown-menu">';
+	          				echo '<li><a href="#"><i class="glyphicon glyphicon-cog"></i> Preferences </a></li>';
+	          				echo '<li class="divider"></li>';
+	          				echo '<li class="divider"></li>';
+        					echo '<li><a href="logout.php"><i class="glyphicon glyphicon-off"></i> Logout</a></li>';
+	        			echo '</ul>';
+      				echo '</li>';
+    			echo '</ul>';
         	}
-        	else
+    		else
         	{
         		
           		echo '<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">';

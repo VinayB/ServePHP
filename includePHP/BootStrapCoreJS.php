@@ -5,6 +5,7 @@
 	<script src="./assets/bootstrap/3-0-2/js/bootstrap.js"></script>
 
 	<script type="text/javascript">
+	// Script courtsey - http://www.9lessons.info/2012/04/bootstrap-registration-form-tutorial.html
 			
 			$(document).ready(function()
 			 {
