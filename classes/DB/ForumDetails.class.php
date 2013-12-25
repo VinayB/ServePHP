@@ -42,7 +42,31 @@ class ForumDetails{
 		mysql_close($db->connect());
 		
 	}
+
+	public function insertNewForumPost()
+	{
+		// Connect to the DB
+		$db = new EzeeDB();
+		$db->deprec_connect();
 		
+		//insert the data into DB for the message posted
+		$result = mysql_query("TO BE WRITTEN");
+		
+		if (!$result) {
+			die('Invalid query: <<insertNewForumPost>> - ' .$sql . mysql_error($this->connect()));
+		}
+		
+		if(mysql_num_rows($result) == 1)
+			return $db->processRowSet($result, true);
+
+		return $db->processRowSet($result);
+		
+		mysql_free_result($result);
+		
+		mysql_close($db->connect());
+		
+	}
+	
 	
 	public function getTopicRepliesByTopicId()
 	{

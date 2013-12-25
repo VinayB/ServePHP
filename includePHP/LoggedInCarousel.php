@@ -21,18 +21,29 @@
 				<div id="userCarousel" class="carousel slide">
 						<!--  Carousel Items  -->
 						<div class=""carousel-inner">
-							<div class="item-active">
-								<div class="row-fluid">
+							<div class="row-fluid">
+								<div class="item-active">
 									<div class="span2"><a class="thumbnail" href="#"> <img src="./static/images/150x75 Chocolate.jpg"></a></div>
-									<div class="span2"><a class="thumbnail" href="#"> <img src="./static/images/150x75 ColoredFaces.jpg"></a></div>
-									<div class="span2"><a class="thumbnail" href="#"> <img src="./static/images/150x75 Mountain.jpg"></a></div>
-									<div class="span2"><a class="thumbnail" href="#"> <img src="./static/images/150x75 Movie300.jpg"></a></div>
-									<div class="span2"><a class="thumbnail" href="#"> <img src="./static/images/150x75 Sports.jpg"></a></div>
-									<div class="span2"><a class="thumbnail" href="#"> <img src="./static/images/150x75 Interior.jpg"></a></div>
-								</div> <!-- row-fluid End -->
-							</div> <!--  item-active End -->
-						</div> <!--  carousel-inner End -->
-						
+								</div>
+								<div class="item">
+										<div class="span2"><a class="thumbnail" href="#"> <img src="./static/images/150x75 ColoredFaces.jpg"></a></div>
+								</div>
+								<div class="item">
+										<div class="span2"><a class="thumbnail" href="#"> <img src="./static/images/150x75 Mountain.jpg"></a></div>
+								</div>
+								<div class="item">
+										<div class="span2"><a class="thumbnail" href="#"> <img src="./static/images/150x75 Movie300.jpg"></a></div>
+								</div>
+								<div class="item">
+										<div class="span2"><a class="thumbnail" href="#"> <img src="./static/images/150x75 Sports.jpg"></a></div>
+								</div>
+								<div class="item">
+										<div class="span2"><a class="thumbnail" href="#"> <img src="./static/images/150x75 Interior.jpg"></a></div>
+								</div>
+							
+							</div> <!--  row-fluid End -->
+					</div> <!--  carousel-inner End -->
+					
 						<a class="left carousel-control" href="#userCaroursel" data-slide="prev"></a>
 						<a class="right carousel-control" href="#userCaroursel" data-slide="next"></a>
 				</div> <!--  carousel slide End -->
