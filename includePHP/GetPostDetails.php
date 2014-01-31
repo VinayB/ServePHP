@@ -14,7 +14,10 @@
 					require_once './classes/DB/ForumDetails.class.php';
 					$dbForumDtls = new ForumDetails();
 					$results = array();
-					$results = $dbForumDtls->getForumPosts();
+					//$results = $dbForumDtls->getForumPosts();
+					
+					$results = $dbForumDtls->getForumPostsForLoggedInUser($_SESSION["user_name"]);
+					
 					$rowfluidIndicator = 0;
 					
 					foreach ($results as $row)

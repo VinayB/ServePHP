@@ -60,15 +60,17 @@
   	
   	<?php include('./includePHP/TopNav.php');?>
 	<!-- Subhead
-	================================================== -->
+	================================================== 	
 	<header class="jumbotron subhead" id="overview"> 
-		<div class="container">
-	  		<?php include('./includePHP/LoggedInCarousel.php');?>
-	  	</div>
-	</header>
+		<div class="container"> -->
+	  		<?php // include('./includePHP/LoggedInCarousel.php');?>
+	  	<!-- </div>
+	</header> -->
+	
 
 	<!-- ======= Left Nav Start ========== -->
-	<div class="container">
+	<div class="container-fluid">
+
 	<!--  Left Nav takes 2 columns out of bootstrap's 12 column layout -->
 	<?php include('./includePHP/LoggedInLeftNav.php');?>
 

@@ -1,3 +1,4 @@
+ 
 <!-- Standard Footer page -->
 <div class="container">
 	<div class="row">
@@ -55,7 +56,8 @@
 			</div> <!--  span9 End -->
 	</div> <!--  row End -->
 </div> <!-- Container End --> 
-              <hr>
+
+<hr>
 
               <div class="row">
                        <div class="span12">

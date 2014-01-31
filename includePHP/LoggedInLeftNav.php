@@ -16,7 +16,7 @@
       	-->
 
 	<div class="span2 bs-docs-sidebar">
-        <ul class="nav nav-list bs-docs-sidenav">
+        <ul class="nav nav-list bs-docs-sidenav"> 
   			<li class="active"><a href="#"><i class="fa fa-cogs fa-fw"></i> Services</a></li>
   			<li><a href="#"><i class="fa fa-group fa-fw"></i> My Groups</a></li>
   			<li><a href="#"><i class="fa fa-tasks fa-fw"></i> My Tasks</a></li>
