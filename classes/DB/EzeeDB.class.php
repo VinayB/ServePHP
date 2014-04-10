@@ -4,10 +4,10 @@
 // 7-May-2012
 class EzeeDB {
 
-	protected $db_host = 'EzeeTest.db.11533594.hostedresource.com';
-	protected $db_user = 'EzeeTest';
-	protected $db_pass = 'Vinuta@138';
-    protected $db_name = "EzeeTest";
+	protected $db_host = '';
+	protected $db_user = '';
+	protected $db_pass = '';
+    protected $db_name = "";
 
     //open a connection to the database. Make sure this is called
 	//on every page that needs to use the database.
